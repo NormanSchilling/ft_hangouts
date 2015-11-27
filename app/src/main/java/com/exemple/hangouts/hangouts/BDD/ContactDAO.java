@@ -4,6 +4,9 @@ import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.util.Log;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.CursorAdapter;
 
 /**
  * Created by nono on 27/11/15.
@@ -41,7 +44,7 @@ public class ContactDAO extends DAOBase
             ContentValues value = new ContentValues();
             value.put(ContactDAO.NAME, c.getName());
             value.put(ContactDAO.NUMERO, c.getNumero());
-            mDb.update(TABLE_NAME, value, KEY  + " = ?", new String[] {String.valueOf(c.getId())});
+            mDb.update(TABLE_NAME, value, KEY + " = ?", new String[]{String.valueOf(c.getId())});
         }
 
         public void select(long id)
@@ -49,16 +52,9 @@ public class ContactDAO extends DAOBase
             Cursor c = mDb.rawQuery("select " + NAME + ", " + NUMERO + " from " + TABLE_NAME + " where id = ?", new String[]{String.valueOf(id)});
         }
 
-        public void selectAll()
+        public Cursor selectAll()
         {
-            Cursor c = mDb.rawQuery("select * from " + TABLE_NAME, new String[]{});
-            if (c == null)
-                return ;
-            while (c.moveToNext()) {
-                String[] items = c.getColumnNames();
-                Log.d("NAME CONTACT",items.getClass().getName());
-            }
-            c.close();
-
+            Cursor c = mDb.rawQuery("select " + KEY  + " as _id," + NAME + ", " + NUMERO + " from " + TABLE_NAME, null);
+            return c;
         }
 }

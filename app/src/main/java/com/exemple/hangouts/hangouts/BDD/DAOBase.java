@@ -20,8 +20,6 @@ public abstract class DAOBase
     }
 
     public SQLiteDatabase open() {
-        // Pas besoin de fermer la dernière base puisque getWritableDatabase s'en charge
-        Log.d("salut", "bonjour");
         mDb = mHandler.getWritableDatabase();
         return mDb;
     }

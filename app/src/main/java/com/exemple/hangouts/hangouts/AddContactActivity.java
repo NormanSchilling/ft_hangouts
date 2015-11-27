@@ -26,6 +26,8 @@ public class AddContactActivity extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.add_contact);
+        contactManager = new ContactDAO(this);
+        contactManager.open();
         nameContactField = (EditText)findViewById(R.id.nameContactField);
         numeroContactField = (EditText)findViewById(R.id.numeroContactField);
         saveContactButton = (Button)findViewById(R.id.saveContactButton);
@@ -37,7 +39,6 @@ public class AddContactActivity extends ActionBarActivity {
         @Override
         public void onClick(View v) {
             contact = new Contact(nameContactField.getText().toString(), numeroContactField.getText().toString());
-            contactManager = new ContactDAO(v.getContext());
             contactManager.add(contact);
         }
     };
