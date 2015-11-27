@@ -10,6 +10,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.CursorAdapter;
 import android.widget.ListView;
@@ -52,6 +53,7 @@ public class MainActivity extends ActionBarActivity {
         ContactCursorAdapter contactAdapter = new ContactCursorAdapter(this, contactCursor);
         // Attach cursor adapter to the ListView
         listViewContact.setAdapter(contactAdapter);
+        listViewContact.setOnItemClickListener(new ContactItemListener(contactCursor));
     }
 
     View.OnClickListener addContactButtonListener = new View.OnClickListener()
@@ -86,6 +88,22 @@ public class MainActivity extends ActionBarActivity {
         return super.onOptionsItemSelected(item);
     }
 
+    class ContactItemListener implements AdapterView.OnItemClickListener
+    {
+        private Cursor      cursor;
+
+        ContactItemListener(Cursor cursorContact)
+        {
+            cursor = cursorContact;
+        }
+
+        @Override
+        public void onItemClick(AdapterView<?> parent, View view, int position, long id)
+        {
+            
+        }
+    }
+
     public class ContactCursorAdapter extends CursorAdapter{
 
         public ContactCursorAdapter(Context context, Cursor c) {
@@ -99,6 +117,7 @@ public class MainActivity extends ActionBarActivity {
 
         @Override
         public void bindView(View view, Context context, Cursor cursor) {
+
             TextView nameTextView = (TextView) view.findViewById(R.id.nameTextView);
             TextView numeroTextView = (TextView) view.findViewById(R.id.numeroTextView);
             // Extract properties from cursor

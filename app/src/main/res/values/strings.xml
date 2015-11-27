@@ -5,11 +5,14 @@
     <string name="saveContactButton">Save Contact</string>
 
     <string name="addContact">Add Contact</string>
+    <string name="profileContact">Profile</string>
     <string name="nameContactHintField">Name</string>
     <string name="numeroContactHintField">Numéro</string>
 
     <string name="action_settings">Settings</string>
     <string name="title_activity_add_contact">AddContact</string>
+    <string name="title_activity_profile">ProfileContact</string>
+
 
 
 </resources>
