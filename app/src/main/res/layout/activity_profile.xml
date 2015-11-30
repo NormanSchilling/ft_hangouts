@@ -14,4 +14,58 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true" />
 
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/nameProfileContactEditText"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="50dp" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/numeroProfileContactEditText"
+            android:layout_below="@+id/nameProfileContactEditText"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp" />
+
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/updateContactButton"
+            android:id="@+id/updateContactButton"
+            android:layout_below="@+id/numeroProfileContactEditText"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true" />
+
+    </RelativeLayout>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/deleteContactButton"
+        android:id="@+id/deleteContactButton"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/messageContactButton"
+        android:id="@+id/messageContactButton"
+        android:layout_alignTop="@+id/deleteContactButton"
+        android:layout_toLeftOf="@+id/deleteContactButton"
+        android:layout_toStartOf="@+id/deleteContactButton" />
+
+
 </RelativeLayout>

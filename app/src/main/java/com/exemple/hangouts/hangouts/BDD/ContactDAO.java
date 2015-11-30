@@ -42,6 +42,7 @@ public class ContactDAO extends DAOBase
         public void update(Contact c)
         {
             ContentValues value = new ContentValues();
+            value.put(ContactDAO.NAME, c.getId());
             value.put(ContactDAO.NAME, c.getName());
             value.put(ContactDAO.NUMERO, c.getNumero());
             mDb.update(TABLE_NAME, value, KEY + " = ?", new String[]{String.valueOf(c.getId())});

@@ -3,16 +3,23 @@
 
     <string name="addContactButton">+</string>
     <string name="saveContactButton">Save Contact</string>
+    <string name="updateContactButton">Update Contact</string>
+    <string name="deleteContactButton">-</string>
+    <string name="messageContactButton">SMS</string>
+    <string name="sendMessageButton">Send SMS</string>
 
     <string name="addContact">Add Contact</string>
     <string name="profileContact">Profile</string>
     <string name="nameContactHintField">Name</string>
     <string name="numeroContactHintField">Numéro</string>
+    <string name="smsHintField">Write your message...</string>
 
     <string name="action_settings">Settings</string>
     <string name="title_activity_add_contact">AddContact</string>
     <string name="title_activity_profile">ProfileContact</string>
+    <string name="title_activity_sms_send">smsSend</string>
 
-
-
+    <string name="color_green">Green</string>
+    <string name="color_red">Red</string>
+    <string name="color_blue">Blue</string>
 </resources>
