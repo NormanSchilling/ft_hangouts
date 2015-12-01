@@ -29,9 +29,17 @@
             android:label="@string/title_activity_profile" >
         </activity>
         <activity
-            android:name=".smsSendActivity"
+            android:name=".SmsSendActivity"
             android:label="@string/title_activity_sms_send" >
         </activity>
+
+        <receiver
+            class="com.exemple.hangouts.hangouts.Broadcast.SmsReceiver"
+            android:name="com.exemple.hangouts.hangouts.Broadcast.SmsReceiver">
+            <intent-filter android:priority="100">
+                <action android:name="android.provider.Telephony.SMS_RECEIVED" />
+            </intent-filter>
+        </receiver>
     </application>
 
 </manifest>

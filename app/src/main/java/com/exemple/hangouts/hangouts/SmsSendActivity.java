@@ -29,6 +29,7 @@ import android.widget.Toast;
 
 import com.exemple.hangouts.hangouts.BDD.Contact;
 import com.exemple.hangouts.hangouts.BDD.ContactDAO;
+import com.exemple.hangouts.hangouts.Broadcast.SmsReceiver;
 
 import java.text.NumberFormat;
 import java.text.SimpleDateFormat;
@@ -38,7 +39,7 @@ import java.util.Date;
 import java.util.List;
 
 
-public class smsSendActivity extends AppCompatActivity {
+public class SmsSendActivity extends AppCompatActivity {
 
     List<String>         listSms;
     ListView             smsListView;
@@ -65,6 +66,7 @@ public class smsSendActivity extends AppCompatActivity {
         smsSendButton.setOnClickListener(smsSendButtonListener);
 
     }
+
 
     public void refreshSmsInbox() {
         ContentResolver contentResolver = getContentResolver();
