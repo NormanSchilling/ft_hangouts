@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Hangouts</string>
+    <string name="action_settings">Options</string>
+    <string name="addContact">Ajoutez Contact</string>
+    <string name="color_blue">Bleue</string>
+    <string name="color_green">Vert</string>
+    <string name="color_red">Rouge</string>
+    <string name="messageContactButton">SMS</string>
+    <string name="deleteContactButton">-</string>
+    <string name="addContactButton">+</string>
+    <string name="nameContactHintField">Nom</string>
+    <string name="numeroContactHintField">Numéro</string>
+    <string name="profileContact">Profil</string>
+    <string name="saveContactButton">Sauvegardez Contact</string>
+    <string name="sendMessageButton">Envoyez SMS</string>
+    <string name="smsHintField">Ecrivez votre message...</string>
+    <string name="title_activity_add_contact">Ajoutez Contact</string>
+    <string name="title_activity_profile">Profil Contact</string>
+    <string name="title_activity_sms_send">SmsEnvoie</string>
+    <string name="updateContactButton">Editez Contact</string>
+</resources>

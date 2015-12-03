@@ -11,7 +11,7 @@
     <string name="addContact">Add Contact</string>
     <string name="profileContact">Profile</string>
     <string name="nameContactHintField">Name</string>
-    <string name="numeroContactHintField">Numéro</string>
+    <string name="numeroContactHintField">Phone Number</string>
     <string name="smsHintField">Write your message...</string>
 
     <string name="action_settings">Settings</string>
